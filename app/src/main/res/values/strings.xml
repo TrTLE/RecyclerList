@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RecyclerViewApp</string>
+    <string-array name="mdNameArray">
+        <item>Cloud</item>
+        <item>Bubble</item>
+        <item>Flower</item>
+        <item>Star</item>
+        <item>Home</item>
+        <item>Rowing</item>
+        <item>Warning</item>
+        <item>Sun</item>
+        <item>Flash</item>
+    </string-array>
+</resources>
