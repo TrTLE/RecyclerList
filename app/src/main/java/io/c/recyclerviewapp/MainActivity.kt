@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
     val toto = ArrayList<MDIcon>(8)
+
     //var mdArray2 = MutableList<MDIcon>intersect (),
 
     //val nbArray = arrayOf(MDIcon("toto"), MDIcon("Titi"),"tutu")
