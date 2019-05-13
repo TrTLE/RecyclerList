@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import io.c.recyclerviewapp.R
 import kotlinx.android.synthetic.main.activity_item_mdicon.view.*
 
-class MyVersionAdapteur (val items: Array<MDIcon>) : RecyclerView.Adapter<MyVersionAdapteur.ViewHolder>() {
+class MyAdapter (val items: ArrayList<MyDataClassQuiVaBien>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //@@@@@   fonction retournant la visualisation d’une ligne de la liste  @@@@@
@@ -40,9 +40,11 @@ class MyVersionAdapteur (val items: Array<MDIcon>) : RecyclerView.Adapter<MyVers
         holder.bindAndVersion(items[position])
     }
 
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    //@@@@@@@@              CLASSE INTERNE : INNER CLASS                @@@@@@@@@
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //__________________________________________________________________________________________________________
+    //==========================================================================================================
+    //@@@@@@@@@@@@@@@              CLASSE INTERNE : INNER CLASS                @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //==========================================================================================================
+    //__________________________________________________________________________________________________________
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
         //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -50,7 +52,9 @@ class MyVersionAdapteur (val items: Array<MDIcon>) : RecyclerView.Adapter<MyVers
         //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
-        fun bindAndVersion(andVersion: MDIcon) {
+        fun bindAndVersion(andVersion: MyDataClassQuiVaBien) {
+
+            //      With == Switch
             with(andVersion) {
                 itemView.andVersionTxt.text = "$name"
             }
